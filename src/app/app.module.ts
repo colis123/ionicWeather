@@ -11,13 +11,14 @@ import { HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { SettingsPageModule } from './pages/settings/settings.module';
 
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpModule, IonicStorageModule.forRoot()],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpModule, SettingsPageModule,IonicStorageModule.forRoot()],
   providers: [
     StatusBar,
     SplashScreen, Geolocation,

@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>settings</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-card margin-top>
+    <ion-card-header>
+      <ion-card-title text-center color="light">Change City</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
 
-<ion-content padding>
+      <ion-item>
+        <ion-label position="floating" color="light">City</ion-label>
+        <ion-input color="light" type="text" [(ngModel)]="city" name=""></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-label position="floating" color="light">County</ion-label>
+        <ion-input color="light" type="text" [(ngModel)]="country" name=""></ion-input>
+      </ion-item>
+
+        <div class="button">
+          <ion-button color="light" (click)="saveForm()">
+            <ion-icon color="primary" name="add"></ion-icon>
+          </ion-button>
+        </div>
+
+        <div class='location'>
+          <p>Get current location</p>
+          <div>
+            <ion-fab horizontal="center">
+              <ion-fab-button color="button" (click)="getLocation()">
+                  <ion-icon name="navigate"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+         </div>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
 </ion-content>
