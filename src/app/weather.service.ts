@@ -16,11 +16,11 @@ export class WeatherService {
 
   constructor( private http: Http) { }
 
-  getData(city,country) {
+  getData(city: string,country: string) {
     return this.http.get(`${this.url}${city},${country}&units=imperial&APPID=${this.apiKey}`).pipe(map(res => res.json()));
   }
 
-  getGeo(lat, lon) {
+  getGeo(lat: number, lon: number) {
     return this.http.get(`${this.globalUrl}${lat}&lon=${lon}&units=imperial&APPID=${this.apiKey}`).pipe(map(res => res.json()));
   }
 }

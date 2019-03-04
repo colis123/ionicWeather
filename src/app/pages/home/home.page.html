@@ -1,9 +1,66 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content padding>
+    
+<ion-content>
+  <div class="notMobile">
+    <div [ngClass]="(ampm < 18)?'container':'container-night'">
 
+      <div class="header">
+        <div class="city">{{cityName}}</div>
+        <div class="condition">{{weather}}</div>
+        <div class="temp">{{temp}}&deg;</div>
+      </div>
+
+      <div class="data">
+        <div>{{day}}</div>
+        <div class="high">{{tempMax}}&deg;</div>
+        <div class="low">{{tempMin}}&deg;</div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="info">
+        <div class="label">
+          <p>Sunrise</p>
+          <p>Sunset</p>
+        </div>
+        
+        <div class="infoName">
+          <p>{{sunriseHour}}:{{sunriseMinute}}</p>
+          <p>{{sunsetHour}}:{{sunsetMinute}}</p>
+        </div>
+      </div>
+      <div class="info">
+        <div class="label">
+          <p>Humidity</p>
+          <p>Pressure</p>
+        </div>
+        
+        <div class="infoName">
+          <p>{{humidity}}</p>
+          <p>{{pressure}}</p>
+        </div>
+      </div>
+      <div class="info">
+        <div class="label">
+          <p>Wind Speed</p>
+          <p>Looks Like</p>
+        </div>
+        
+        <div class="infoName">
+          <p>{{windSpeed}}</p>
+          <p>{{looksLike}}</p>
+        </div>
+      </div>
+
+      <div class="bottomLine"></div>
+
+      <ion-fab class="changeBtn">
+        <ion-fab-button color="button" (click)="cityChange()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    
+
+    </div>  
+  </div>
 </ion-content>
