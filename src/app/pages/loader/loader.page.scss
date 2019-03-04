@@ -1,0 +1,56 @@
+body {
+  background: lightblue;
+  animation: back 3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+// Background animation
+@keyframes back {
+  0% {
+    background: dodgerblue;
+  }
+
+  100% {
+    background: white;
+  }
+}
+
+
+.cloud {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.cloud img {
+  width: 40%;
+  height: 90%;
+
+}
+
+
+.welcome {
+  font-size: 2.5em;
+  font-weight: bold;
+  animation: welcome 2.2s;
+  animation-delay: 500ms;
+  color: dodgerblue;
+  opacity: 0;
+}
+
+@keyframes welcome {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
