@@ -42,13 +42,7 @@ export class HomePage implements OnInit {
                private router: Router,
                private modal: ModalController) { }
 
-  //Get location.
-  // getLocation() {
-  //   this.service.getGeo(32.715736, -117.161087).subscribe
-  //   ((res: any) => {
-  //     console.log('geoLocation',res);
-  //   });
-  // }
+
 
   // Show Modal
   async cityChange() {
@@ -157,7 +151,6 @@ export class HomePage implements OnInit {
    // Get Day
    this.getDay();
 
-  //  this.getLocation();
 
    this.getTimeOfDay();
  }

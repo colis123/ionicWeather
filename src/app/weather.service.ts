@@ -20,7 +20,7 @@ export class WeatherService {
     return this.http.get(`${this.url}${city},${country}&units=imperial&APPID=${this.apiKey}`).pipe(map(res => res.json()));
   }
 
-  getGeo(lat: string, lon: string) {
+  getGeo(lat: any, lon: any) {
     return this.http.get(`${this.globalUrl}${lat}&lon=${lon}&units=imperial&APPID=${this.apiKey}`).pipe(map(res => res.json()));
   }
 }
