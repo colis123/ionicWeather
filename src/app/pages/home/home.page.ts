@@ -42,7 +42,7 @@ export class HomePage implements OnInit {
                private router: Router,
                private modal: ModalController) { }
 
-  // Get location.
+  //Get location.
   // getLocation() {
   //   this.service.getGeo(32.715736, -117.161087).subscribe
   //   ((res: any) => {

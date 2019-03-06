@@ -47,12 +47,21 @@ export class SettingsPage implements OnInit {
   // Get Geolocation
   getLocation() {
     let options = {timeout: 10000, enableHighAccuracy: true}
-    this.geolocation.getCurrentPosition(options).then((resp) => {
-      console.log('location',resp);
-     
+    this.geolocation.getCurrentPosition(options).then((res) =>  {
+      this.lon = res.coords.longitude;
+      this.lat = res.coords.latitude;
+
      }).catch((error) => {
        console.log('Error getting location', error);
+     }).then(_ => {
+       this.geoCall(this.lon, this.lat);
      })
+  }
+
+  geoCall(lat,lon) {
+    this.service.getGeo(lat, lon).subscribe(res => {
+      console.log(res);
+    })
   }
 
     // Loader
