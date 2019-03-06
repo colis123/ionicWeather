@@ -4,6 +4,7 @@ import { Storage } from '@ionic/storage';
 import { ModalController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { WeatherService} from '../../weather.service';
 
 @Component({
   selector: 'app-settings',
@@ -22,12 +23,13 @@ export class SettingsPage implements OnInit {
                private storage: Storage,
                private modal: ModalController,
                private loader: LoadingController,
-               private geolocation: Geolocation) {
+               private geolocation: Geolocation,
+               private service: WeatherService) {
 
       
     //  Get Storage Values First
     this.storage.get('location').then(val => {
-      console.log(val);
+      //console.log(val);
       if(val!= null) {
         // If is not null, pull from storage
         let location = JSON.parse(val);
@@ -47,11 +49,10 @@ export class SettingsPage implements OnInit {
     let options = {timeout: 10000, enableHighAccuracy: true}
     this.geolocation.getCurrentPosition(options).then((resp) => {
       console.log('location',resp);
-      this.lat =  resp.coords.latitude;
-      this.lon = resp.coords.longitude;
+     
      }).catch((error) => {
        console.log('Error getting location', error);
-     });
+     })
   }
 
     // Loader

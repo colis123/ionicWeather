@@ -43,12 +43,12 @@ export class HomePage implements OnInit {
                private modal: ModalController) { }
 
   // Get location.
-  getLocation() {
-    this.service.getGeo(32.715736, -117.161087).subscribe
-    ((res: any) => {
-      console.log('geoLocation',res);
-    });
-  }
+  // getLocation() {
+  //   this.service.getGeo(32.715736, -117.161087).subscribe
+  //   ((res: any) => {
+  //     console.log('geoLocation',res);
+  //   });
+  // }
 
   // Show Modal
   async cityChange() {
@@ -134,7 +134,7 @@ export class HomePage implements OnInit {
    
    //API call to get data
    this.service.getData(this.location.city,this.location.country).subscribe((res:any) => {
-     console.log('getData',res);
+     //console.log('getData',res);
      this.cityName = res.name;
      this.country = res.sys.country;
      this.weather = res.weather[0].main;
@@ -157,7 +157,7 @@ export class HomePage implements OnInit {
    // Get Day
    this.getDay();
 
-   this.getLocation();
+  //  this.getLocation();
 
    this.getTimeOfDay();
  }
