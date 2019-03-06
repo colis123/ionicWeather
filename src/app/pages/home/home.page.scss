@@ -13,11 +13,12 @@
   font-family: 'Montserrat', sans-serif;
   animation: clouds 5000ms infinite;
   background-image: linear-gradient(to bottom, transparent, rgba(196, 222, 255, 0.623)), url(../../../assets/images/clouds-ight.jpg);
-  -webkit-animation: clouds 2000s infinite;
+  animation: clouds 2000s forwards;
+  animation-timing-function: linear;
 }
 
 // Background Animation
-@-webkit-keyframes clouds {
+@keyframes clouds {
   from { background-position: -400px 1px }
   to { background-position: 0px 0px }
 }
