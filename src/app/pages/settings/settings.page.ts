@@ -71,7 +71,7 @@ export class SettingsPage implements OnInit {
   // Loader for city
   async cityLoader() {
     const loading = await this.loader.create({
-      message: 'Loading',
+      message: 'Getting location',
       duration: 500
     });
     await loading.present();
