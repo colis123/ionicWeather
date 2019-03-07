@@ -106,9 +106,32 @@
 }
 
 .unit {
+  transform: translate(-4.5em, .5em);
+  font-size: 12px !important;
+}
+
+.percent {
+  transform: translate(-6em, .5em);
+  font-size: 12px !important;
+}
+
+.inMg {
+  transform: translate(-3.5em, .5em);
+  font-size: 12px !important;
+}
+
+.mph {
+  transform: translate(-9em, .5em);
+  font-size: 12px !important;
+}
+
+.looks-like {
+  font-size: 20px !important;
+
   position: relative;
-  transform: translateX(-1.5em);
-  font-size: .2em;
+  right: 60px;
+  top: 9px;
+
 }
 
 

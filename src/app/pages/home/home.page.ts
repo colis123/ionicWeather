@@ -128,7 +128,7 @@ export class HomePage implements OnInit {
    
    //API call to get data
    this.service.getData(this.location.city,this.location.country).subscribe((res:any) => {
-     //console.log('getData',res);
+     console.log('getData',res);
      this.cityName = res.name;
      this.country = res.sys.country;
      this.weather = res.weather[0].main;
@@ -139,7 +139,7 @@ export class HomePage implements OnInit {
      this.windSpeed = res.wind.speed;
      this.humidity = res.main.humidity;
      this.pressure = (res.main.pressure / 33.864).toFixed(1);
-     this.sunriseHour = new Date(res.sys.sunrise * 1000).getHours();
+     this.sunriseHour =  this.milliToHour(res.sys.sunrise);
      this.sunriseMinute = this.milliToMinutes(res.sys.sunrise);
      this.sunsetHour = this.milliToHour(res.sys.sunset);
      this.sunsetMinute = this.milliToMinutes(res.sys.sunset);
