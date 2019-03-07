@@ -3,15 +3,16 @@
 .container {
   color: white;
   font-family: 'Montserrat', sans-serif;
-  animation: clouds 5000ms infinite;
+  //animation: clouds 5000ms infinite;
   background-image: linear-gradient(to bottom, transparent, rgba(196, 222, 255, 0.623)), url(../../../assets/images/day-clear-clouds.jpeg);
-  -webkit-animation: clouds 200s linear infinite;
+  animation: clouds 100s forwards;
+  animation-timing-function: linear;
 }
 
 .container-night {
   color: white;
   font-family: 'Montserrat', sans-serif;
-  animation: clouds 5000ms infinite;
+  //animation: clouds 5000ms infinite;
   background-image: linear-gradient(to bottom, transparent, rgba(196, 222, 255, 0.623)), url(../../../assets/images/clouds-ight.jpg);
   animation: clouds 100s forwards;
   animation-timing-function: linear;
@@ -48,7 +49,7 @@
 .data {
   display: flex;
   justify-content: flex-start;
-  margin: 3em 1em;
+  margin: 2.5em 1em;
   justify-content: space-between;
   font-size: 1.5em;
   transform: translateY(-2em);
