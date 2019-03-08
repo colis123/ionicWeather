@@ -1,4 +1,6 @@
 # ionicWeather
 Simple Ionic 4 weather application
 
-#some
+
+# About
+Simple app using openweather API. Used Geolocation plug in to get current location.
